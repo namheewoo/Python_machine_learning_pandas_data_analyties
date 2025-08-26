@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jul 28 16:11:26 2025
+
+@author: skagm
+"""
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df=pd.read_csv('./auto-mpg.csv',header=None)
+df.columns=['mpg','cylinders','displacement','horsepower','weight',
+              'acceleration','model year','origin','name']
+df.plot(x='weight', y='mpg',kind='scatter')
+plt.show()
